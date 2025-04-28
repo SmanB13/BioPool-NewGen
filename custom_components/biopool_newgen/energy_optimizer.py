@@ -1,1 +1,1 @@
-# Energy Optimizer logic placeholder
+# Placeholder energy optimizer

@@ -1,1 +1,1 @@
-# Dashboard Service logic placeholder
+# Placeholder dashboard service

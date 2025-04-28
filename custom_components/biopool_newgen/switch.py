@@ -1,1 +1,1 @@
-# Switch logic placeholder
+# Placeholder switch

@@ -1,1 +1,1 @@
-# Consumption Tracker logic placeholder
+# Placeholder consumption tracker

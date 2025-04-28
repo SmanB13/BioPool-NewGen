@@ -1,1 +1,1 @@
-# Temperature Manager logic placeholder
+# Placeholder temperature manager

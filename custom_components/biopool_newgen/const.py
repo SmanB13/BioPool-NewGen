@@ -1,1 +1,1 @@
-# Constants placeholder
+# Placeholder constants

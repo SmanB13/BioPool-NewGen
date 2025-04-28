@@ -1,1 +1,1 @@
-# Demo Simulator logic placeholder
+# Placeholder demo simulator

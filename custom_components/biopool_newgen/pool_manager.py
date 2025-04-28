@@ -1,1 +1,1 @@
-# Pool Manager logic placeholder
+# Placeholder pool manager

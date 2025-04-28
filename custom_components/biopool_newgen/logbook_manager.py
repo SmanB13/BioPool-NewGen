@@ -1,1 +1,1 @@
-# Logbook Manager logic placeholder
+# Placeholder logbook manager

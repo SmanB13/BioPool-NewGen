@@ -1,1 +1,1 @@
-# Binary sensor logic placeholder
+# Placeholder binary sensor

@@ -1,1 +1,1 @@
-// Lovelace Card JavaScript placeholder
+// Placeholder Lovelace card

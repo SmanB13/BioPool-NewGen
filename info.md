@@ -1,1 +1,1 @@
-BioPool-NewGen - Manage your biological pool through Home Assistant. Developed by SmanB13.
+BioPool-NewGen - Manage your biological pool with Home Assistant. Developed by SmanB13.

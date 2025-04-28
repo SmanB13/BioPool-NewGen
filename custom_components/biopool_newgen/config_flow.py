@@ -1,1 +1,1 @@
-# Config flow logic placeholder
+# Placeholder config flow

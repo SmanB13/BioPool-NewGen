@@ -1,1 +1,1 @@
-# Init file for biopool_newgen
+# Init file

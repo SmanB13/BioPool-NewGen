@@ -1,1 +1,1 @@
-# Sensor logic placeholder
+# Placeholder sensor
