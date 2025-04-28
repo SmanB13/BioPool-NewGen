@@ -1,0 +1,1 @@
+# AutoTest Manager logic placeholder

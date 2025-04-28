@@ -1,0 +1,1 @@
+# Logbook Manager logic placeholder
