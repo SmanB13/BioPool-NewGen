@@ -1,0 +1,15 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configuration de BioPool-NewGen",
+        "description": "Configurez votre intégration BioPool-NewGen."
+      }
+    }
+  },
+  "title": "BioPool-NewGen",
+  "description": "Intégration pour la gestion des piscines biologiques.",
+  "options": {
+    "name": "Nom de l'instance"
+  }
+}

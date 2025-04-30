@@ -1,0 +1,7 @@
+
+- platform: template
+  sensors:
+    biopool_filtration_runtime_today:
+      friendly_name: "Filtration Today"
+      unit_of_measurement: "h"
+      value_template: "{{ states('sensor.filtration_runtime_today') }}"

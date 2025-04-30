@@ -1,0 +1,7 @@
+
+alias: Rafraîchir BioPool Status toutes les 5 min
+trigger:
+  - platform: time_pattern
+    minutes: "/5"
+action:
+  - service: biopool_newgen.refresh_status
