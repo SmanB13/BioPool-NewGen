@@ -1,7 +1,7 @@
 
-import voluptuous as vol
 from homeassistant import config_entries
-from homeassistant.const import CONF_ENTITY_ID
+import voluptuous as vol
+from homeassistant.helpers.selector import EntitySelector, EntitySelectorConfig
 from .const import DOMAIN
 
 class BioPoolOptionsFlowHandler(config_entries.OptionsFlow):
@@ -12,13 +12,21 @@ class BioPoolOptionsFlowHandler(config_entries.OptionsFlow):
         if user_input is not None:
             return self.async_create_entry(title="", data=user_input)
 
-        return self.async_show_form(
-            step_id="init",
-            data_schema=vol.Schema({
-                vol.Optional("temp_sensor_entity", default=self.config_entry.options.get("temp_sensor_entity", "")): str,
-                vol.Optional("pump_entity", default=self.config_entry.options.get("pump_entity", "")): str,
-                vol.Optional("uv_entity", default=self.config_entry.options.get("uv_entity", "")): str,
-                vol.Optional("biobacter_entity", default=self.config_entry.options.get("biobacter_entity", "")): str,
-                vol.Optional("oxybio_entity", default=self.config_entry.options.get("oxybio_entity", "")): str
-            })
-        )
+        options = self.config_entry.options
+        data_schema = vol.Schema({
+            vol.Required("volume_m3", default=options.get("volume_m3", 45)): vol.All(vol.Coerce(int), vol.Range(min=5, max=200)),
+            vol.Required("seuil_antigel", default=options.get("seuil_antigel", 2)): vol.Coerce(int),
+            vol.Required("pac_consigne", default=options.get("pac_consigne", 25)): vol.Coerce(int),
+            vol.Optional("cover_active", default=options.get("cover_active", False)): bool,
+            vol.Optional("pac_active", default=options.get("pac_active", True)): bool,
+            vol.Optional("dashboard_enabled", default=options.get("dashboard_enabled", True)): bool,
+            vol.Optional(
+                "temperature_entity",
+                default=options.get("temperature_entity", "sensor.pool_temp")
+            ): EntitySelector(EntitySelectorConfig(domain="sensor")),
+        })
+
+        return self.async_show_form(step_id="init", data_schema=data_schema)
+
+async def async_get_options_flow(config_entry):
+    return BioPoolOptionsFlowHandler(config_entry)
