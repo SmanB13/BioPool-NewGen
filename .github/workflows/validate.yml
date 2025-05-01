@@ -1,0 +1,12 @@
+name: Validate Home Assistant
+
+on: [push]
+
+jobs:
+  hassfest:
+    name: Check with hassfest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run hassfest
+        uses: home-assistant/actions/hassfest@master
