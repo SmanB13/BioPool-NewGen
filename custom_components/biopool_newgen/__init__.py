@@ -42,3 +42,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         )
 
     return True
+
+
+async def async_get_options_flow(config_entry):
+    from .options_flow import BioPoolOptionsFlowHandler
+    return BioPoolOptionsFlowHandler(config_entry)
