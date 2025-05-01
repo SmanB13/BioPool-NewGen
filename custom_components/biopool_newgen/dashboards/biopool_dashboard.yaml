@@ -1,0 +1,46 @@
+
+title: BioPool NewGen
+views:
+  - title: Piscine
+    path: piscine
+    theme: default
+    icon: mdi:pool
+    type: custom
+    cards:
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: thermostat
+            entity: climate.pac_piscine
+            name: Température consigne PAC
+          - type: sensor
+            entity: sensor.pool_temp
+            name: Température de l'eau
+            icon: mdi:coolant-temperature
+          - type: sensor
+            entity: sensor.filtration_mode
+            name: Mode de filtration
+            icon: mdi:filter
+          - type: sensor
+            entity: sensor.energy_consumption
+            name: Consommation énergie
+            icon: mdi:lightning-bolt
+          - type: button
+            entity: switch.pompe_filtration
+            name: Pompe
+            icon: mdi:water-pump
+            show_state: true
+          - type: button
+            entity: switch.uv_lamp
+            name: UV
+            icon: mdi:flash-outline
+            show_state: true
+          - type: sensor
+            entity: sensor.oxybio_level
+            name: Oxybio restant
+            icon: mdi:flask
+          - type: sensor
+            entity: sensor.bacter_level
+            name: Biobacter restant
+            icon: mdi:bottle-tonic

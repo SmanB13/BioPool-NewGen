@@ -2,14 +2,20 @@
   "config": {
     "step": {
       "user": {
-        "title": "BioPool-NewGen Setup",
-        "description": "Configure your BioPool-NewGen integration."
+        "title": "Welcome to your Pool Cockpit 🌊",
+        "description": "Set up your BioPool installation for smart and natural control!"
       }
     }
   },
-  "title": "BioPool-NewGen",
-  "description": "Integration for managing biological pools.",
+  "title": "BioPool NewGen",
+  "description": "Control your natural pool with Home Assistant 🧪💧",
   "options": {
-    "name": "Instance Name"
+    "volume_m3": "Pool water volume (m³)",
+    "seuil_antigel": "Frost protection threshold (°C)",
+    "pac_consigne": "Heat pump setpoint (°C)",
+    "cover_active": "Using pool cover",
+    "pac_active": "Using heat pump",
+    "dashboard_enabled": "Show BioPool dashboard",
+    "temperature_entity": "Temperature sensor"
   }
 }

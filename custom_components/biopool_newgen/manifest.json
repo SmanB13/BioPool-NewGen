@@ -1,7 +1,7 @@
 {
   "domain": "biopool_newgen",
   "name": "BioPool NewGen",
-  "version": "0.3.0-alpha3",
+  "version": "0.3.0-alpha4",
   "config_flow": true,
   "documentation": "https://github.com/SmanB13/BioPool-NewGen",
   "requirements": [],
@@ -9,5 +9,6 @@
   "codeowners": [
     "@SmanB13"
   ],
-  "iot_class": "local_poll"
+  "iot_class": "local_poll",
+  "icon": "mdi:pool-thermometer"
 }
