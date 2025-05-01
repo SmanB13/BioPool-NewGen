@@ -11,7 +11,7 @@ CONFIG_SCHEMA = vol.Schema({
     vol.Optional("temperature_entity", default="sensor.pool_temp"): str,
 })
 
-class BiopoolNewgenConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     VERSION = 1
 
     async def async_step_user(self, user_input=None):
