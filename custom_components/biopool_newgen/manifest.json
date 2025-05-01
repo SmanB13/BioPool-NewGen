@@ -1,7 +1,7 @@
 {
     "domain": "biopool_newgen",
     "name": "BioPool NewGen",
-    "version": "0.3.0-alpha8",
+    "version": "0.3.0-alpha9",
     "config_flow": true,
     "documentation": "https://github.com/SmanB13/BioPool-NewGen",
     "requirements": [],
