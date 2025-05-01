@@ -1,7 +1,15 @@
+
 # BioPool-NewGen
 
-Composant Home Assistant pour piscines biologiques :
-- Modes AUTO / MANUEL / BOOST / HORS-GEL / ARRET
-- Injection Oxybio/Biobacter
-- UV intelligent
-- Simulation complète possible
+Gestion intelligente des piscines biologiques pour Home Assistant.
+
+## Fonctionnalités
+- Modes de filtration : auto, boost, frost, manuel, off
+- Suivi UV / Oxybio / BioBacter
+- Simulation démo sans capteurs
+- Gestion ERP (réglementation, heures min)
+- Carte Lovelace interactive
+- Alertes automatiques
+- Compatible HACS
+
+![Aperçu](preview.png)

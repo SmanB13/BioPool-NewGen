@@ -1,15 +1,27 @@
 
-async def async_update_status(hass):
-    data = hass.data["biopool_newgen"]
-    mode = data["pool"].mode
-    temperature = await data["temperature"].get_temperature(hass)
-    runtime = data["stats"].get_runtime_hours()
-    consumables = data["tracker"].check_levels()
+from homeassistant.core import HomeAssistant
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.helpers.typing import ConfigType
 
-    uv = consumables["uv"]["value"] or 0
-    oxybio = consumables["oxybio"]["value"] or 0
-    biobacter = consumables["biobacter"]["value"] or 0
+DOMAIN = "biopool_newgen"
 
-    await data["dashboard"].update_full_status(
-        mode, temperature, runtime, uv, oxybio, biobacter
-    )
+async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
+    return True
+
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    hass.data.setdefault(DOMAIN, {})
+    hass.data[DOMAIN][entry.entry_id] = entry.data
+
+    async def handle_autotest(call):
+        issues = []
+        required_entities = ["sensor.pool_temp", "switch.pompe_filtration", "switch.uv_lamp"]
+        for eid in required_entities:
+            state = hass.states.get(eid)
+            if not state or state.state in ["unavailable", "unknown"]:
+                issues.append(f"Entité manquante: {eid}")
+        title = "BioPool Autotest"
+        msg = "✅ Tous les systèmes sont OK." if not issues else "\n".join(issues)
+        hass.components.persistent_notification.create(title=title, message=msg)
+
+    hass.services.async_register(DOMAIN, "run_autotest", handle_autotest)
+    return True

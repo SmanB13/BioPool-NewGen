@@ -1,1 +1,1 @@
-# Placeholder constants
+DOMAIN = "biopool_newgen"

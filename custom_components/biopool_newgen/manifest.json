@@ -1,12 +1,13 @@
-
 {
   "domain": "biopool_newgen",
-  "name": "BioPool-NewGen",
-  "version": "0.3.0-alpha2",
-  "documentation": "https://github.com/SmanB13/BioPool-NewGen",
-  "dependencies": [],
-  "codeowners": ["@SmanB13"],
-  "requirements": [],
+  "name": "BioPool NewGen",
+  "version": "0.3.0-alpha3",
   "config_flow": true,
-  "iot_class": "local_polling"
+  "documentation": "https://github.com/SmanB13/BioPool-NewGen",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": [
+    "@SmanB13"
+  ],
+  "iot_class": "local_poll"
 }
