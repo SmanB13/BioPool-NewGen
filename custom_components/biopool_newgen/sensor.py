@@ -13,12 +13,3 @@ class PiscineBioStatusSensor(SensorEntity):
         self._attr_native_value = "En ligne"
         self._attr_should_poll = False
         self._attr_icon = "mdi:pool"
-
-    @property
-    def device_info(self):
-        return {
-            "identifiers": {(DOMAIN, "biopool_main_unit")},
-            "name": "BioPool Control Unit",
-            "manufacturer": "BioPool NewGen",
-            "model": "BP-HA-1.0"
-        }
