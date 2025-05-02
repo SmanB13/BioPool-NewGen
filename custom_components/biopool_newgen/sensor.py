@@ -10,9 +10,9 @@ class PiscineBioStatusSensor(SensorEntity):
     def __init__(self, entry: ConfigEntry):
         self._attr_name = "Piscine Bio - État"
         self._attr_unique_id = f"{DOMAIN}_status"
-        self._attr_native_value = "ok"
+        self._attr_native_value = "Actif"
         self._attr_should_poll = False
-        self._attr_icon = "mdi:water-pump"
+        self._attr_icon = "mdi:pool"
 
     @property
     def device_info(self):
@@ -20,5 +20,6 @@ class PiscineBioStatusSensor(SensorEntity):
             "identifiers": {(DOMAIN, "biopool")},
             "name": "Piscine Bio",
             "manufacturer": "BioPool NewGen",
+            "model": "BP-HA-1.0",
             "entry_type": "service"
         }
