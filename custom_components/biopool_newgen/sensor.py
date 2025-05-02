@@ -8,10 +8,11 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_e
 
 class PiscineBioStatusSensor(SensorEntity):
     def __init__(self, entry: ConfigEntry):
-        self._attr_name = "État Piscine Bio"
+        self._attr_name = "Piscine Bio - État"
         self._attr_unique_id = f"{DOMAIN}_status"
         self._attr_native_value = "ok"
         self._attr_should_poll = False
+        self._attr_icon = "mdi:water-pump"
 
     @property
     def device_info(self):
