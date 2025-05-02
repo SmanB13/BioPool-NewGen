@@ -8,18 +8,17 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_e
 
 class PiscineBioStatusSensor(SensorEntity):
     def __init__(self, entry: ConfigEntry):
-        self._attr_name = "Piscine Bio - État"
-        self._attr_unique_id = f"{DOMAIN}_status"
-        self._attr_native_value = "Actif"
+        self._attr_name = "État du système piscine"
+        self._attr_unique_id = f"{DOMAIN}_core_status"
+        self._attr_native_value = "En ligne"
         self._attr_should_poll = False
         self._attr_icon = "mdi:pool"
 
     @property
     def device_info(self):
         return {
-            "identifiers": {(DOMAIN, "biopool")},
-            "name": "Piscine Bio",
+            "identifiers": {(DOMAIN, "biopool_main_unit")},
+            "name": "BioPool Control Unit",
             "manufacturer": "BioPool NewGen",
-            "model": "BP-HA-1.0",
-            "entry_type": "service"
+            "model": "BP-HA-1.0"
         }
