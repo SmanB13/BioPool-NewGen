@@ -1,14 +1,6 @@
 {
   "name": "BioPool-NewGen",
-  "description": "Home Assistant integration for intelligent and automated management of biological swimming pools.",
-  "domain": "biopool_newgen",
-  "author": "SmanB13",
-  "documentation": "https://github.com/SmanB13/BioPool-NewGen",
-  "issue_tracker": "https://github.com/SmanB13/BioPool-NewGen/issues",
-  "version": "0.1.0",
-  "requirements": [],
-  "dependencies": [],
-  "codeowners": ["@SmanB13"],
-  "config_flow": true,
-  "iot_class": "local_polling"
+  "content_in_root": false,
+  "render_readme": true,
+  "domains": ["biopool_newgen"]
 }
