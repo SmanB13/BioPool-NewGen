@@ -13,5 +13,6 @@
   "dependencies": [],
   "supported_platforms": [
     "sensor"
-  ]
+  ],
+  "config_flow": true
 }
