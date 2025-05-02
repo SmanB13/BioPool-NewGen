@@ -1,18 +1,17 @@
 {
-    "domain": "biopool_newgen",
-    "name": "BioPool NewGen",
-    "version": "0.3.0-alpha9",
-    "documentation": "https://github.com/SmanB13/BioPool-NewGen",
-    "issue_tracker": "https://github.com/SmanB13/BioPool-NewGen/issues",
-    "config_flow": true,
-    "integration_type": "hub",
-    "iot_class": "local_polling",
-    "codeowners": [
-        "@SmanB13"
-    ],
-    "requirements": [],
-    "dependencies": [],
-    "supported_platforms": [
-        "sensor"
-    ]
+  "domain": "biopool_newgen",
+  "name": "BioPool NewGen",
+  "version": "0.3.0-alpha9",
+  "documentation": "https://github.com/SmanB13/BioPool-NewGen",
+  "issue_tracker": "https://github.com/SmanB13/BioPool-NewGen/issues",
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "codeowners": [
+    "@SmanB13"
+  ],
+  "requirements": [],
+  "dependencies": [],
+  "supported_platforms": [
+    "sensor"
+  ]
 }
