@@ -1,21 +1,23 @@
 {
-  "config": {
-    "step": {
-      "user": {
-        "title": "Bienvenue dans votre cockpit piscine 🌊",
-        "description": "Paramétrez votre installation BioPool pour un pilotage intelligent et naturel !"
-      }
+    "config": {
+        "step": {
+            "user": {
+                "title": "Configuration de la piscine Bio",
+                "description": "Bienvenue dans votre cockpit de piscine BioPool 🌿. Configurez les équipements et automatismes.",
+                "data": {
+                    "volume_m3": "Volume de la piscine (m³)",
+                    "seuil_antigel": "Température de protection antigel (°C)",
+                    "pac_consigne": "Température cible de la PAC (°C)",
+                    "cover_active": "Couverture présente",
+                    "pac_active": "Pompe à chaleur active",
+                    "dashboard_enabled": "Créer le tableau de bord automatiquement",
+                    "temperature_entity": "Sonde de température",
+                    "pump_entity": "Pompe principale",
+                    "uv_entity": "Stérilisateur UV",
+                    "oxybio_entity": "Injection Oxybio",
+                    "biobact_entity": "Injection Biobact"
+                }
+            }
+        }
     }
-  },
-  "title": "BioPool NewGen",
-  "description": "Pilotez votre piscine biologique depuis Home Assistant 🧪💧",
-  "options": {
-    "volume_m3": "Volume d'eau de la piscine (m³)",
-    "seuil_antigel": "Protection contre le gel (°C)",
-    "pac_consigne": "Température consigne PAC (°C)",
-    "cover_active": "Avec couverture de piscine",
-    "pac_active": "Avec Pompe à Chaleur",
-    "dashboard_enabled": "Afficher le tableau de bord BioPool",
-    "temperature_entity": "Sonde de température"
-  }
 }
